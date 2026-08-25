@@ -57,14 +57,14 @@ const WisataGalleryModal: React.FC<WisataGalleryModalProps> = ({ isOpen, onClose
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 z-[9999] flex items-center justify-center w-screen h-screen bg-black/50 backdrop-blur-sm cursor-auto"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 cursor-auto"
         >
           <motion.div
             initial={{ scale: 0.9, y: 20 }}
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.9, y: 20 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-4xl mx-4 bg-[#F5F5F0] shadow-2xl rounded-xl z-10 flex flex-col md:flex-row min-h-[400px] md:min-h-[500px] lg:min-h-[550px] items-stretch max-h-[90vh] overflow-y-auto overflow-x-hidden md:overflow-hidden"
+            className="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col md:flex-row"
           >
             {/* Close Button */}
             <button
@@ -99,7 +99,7 @@ const WisataGalleryModal: React.FC<WisataGalleryModalProps> = ({ isOpen, onClose
             )}
 
             {/* Image Side */}
-            <div className="relative w-full md:w-1/2 h-48 md:h-auto bg-stone-200 overflow-hidden rounded-t-xl md:rounded-l-xl md:rounded-tr-none shrink-0">
+            <div className="w-full md:w-1/2 h-64 md:h-auto shrink-0 relative">
               <AnimatePresence mode="wait">
                 <motion.img 
                   key={currentSlide.image}
@@ -116,7 +116,7 @@ const WisataGalleryModal: React.FC<WisataGalleryModalProps> = ({ isOpen, onClose
             </div>
 
             {/* Content Side */}
-            <div className="w-full md:w-1/2 p-5 pb-20 md:p-12 flex flex-col justify-center relative">
+            <div className="w-full md:w-1/2 p-6 sm:p-8 overflow-y-auto">
               <motion.div
                 key={currentIndex}
                 initial={{ opacity: 0, x: 20 }}

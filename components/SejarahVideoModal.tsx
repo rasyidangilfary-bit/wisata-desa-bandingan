@@ -34,14 +34,14 @@ const SejarahVideoModal: React.FC<SejarahVideoModalProps> = ({ isOpen, onClose }
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 z-[9999] flex items-center justify-center w-screen h-screen bg-black/50 backdrop-blur-sm cursor-auto"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 cursor-auto"
         >
           <motion.div
             initial={{ scale: 0.9, y: 20 }}
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.9, y: 20 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-[95vw] md:w-[85vw] lg:w-[80vw] xl:max-w-7xl mx-auto bg-[#F5F5F0] shadow-2xl rounded-xl overflow-hidden z-10 flex flex-col"
+            className="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col md:flex-row"
           >
             {/* Close Button */}
             <button
@@ -52,10 +52,10 @@ const SejarahVideoModal: React.FC<SejarahVideoModalProps> = ({ isOpen, onClose }
               <X className="w-6 h-6" />
             </button>
 
-            {/* Video Section (Top) */}
-            <div className="relative w-full aspect-video rounded-t-xl overflow-hidden bg-black">
+            {/* Video Section (Left side on desktop) */}
+            <div className="w-full md:w-1/2 h-64 md:h-auto shrink-0 relative bg-black">
               <iframe 
-                className="absolute top-0 left-0 w-full h-full"
+                className="absolute inset-0 w-full h-full object-cover"
                 src="https://www.youtube.com/embed/XFCggIhOTsI?autoplay=1&rel=0&modestbranding=1" 
                 title="Sejarah Desa Bandingan" 
                 frameBorder="0" 
@@ -64,8 +64,8 @@ const SejarahVideoModal: React.FC<SejarahVideoModalProps> = ({ isOpen, onClose }
               ></iframe>
             </div>
 
-            {/* Content Section (Bottom) */}
-            <div className="w-full p-6 md:p-8 flex flex-col relative bg-[#F5F5F0]">
+            {/* Content Section (Right side on desktop) */}
+            <div className="w-full md:w-1/2 p-6 sm:p-8 overflow-y-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
