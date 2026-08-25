@@ -76,7 +76,7 @@ const SejarahVideoModal: React.FC<SejarahVideoModalProps> = ({ isOpen, onClose }
                    <span className="font-sans text-sm tracking-widest uppercase">Video Dokumenter</span>
                 </div>
                 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold uppercase leading-none text-foreground">
+                <h1 className="text-4xl md:text-[60px] font-heading font-bold uppercase leading-none text-foreground">
                   SEJARAH DESA BANDINGAN
                 </h1>
               </motion.div>

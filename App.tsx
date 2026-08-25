@@ -253,7 +253,7 @@ const App: React.FC = () => {
             <GradientText 
               text="DESA BANDINGAN" 
               as="h1" 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter text-center text-foreground" 
+              className="text-5xl md:text-[128px] font-bold leading-tight tracking-tighter text-center text-foreground" 
             />
             {/* Optimized Orb - Reduced Blur for Performance */}
             <motion.div 
@@ -440,7 +440,7 @@ const App: React.FC = () => {
       {/* SEJARAH SECTION */}
       <section id="sejarah" className="relative z-10 py-24 lg:py-32 bg-transparent border-t border-foreground/10">
         <div className="w-full max-w-7xl mx-auto flex flex-col items-center text-center px-6">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold uppercase leading-tight drop-shadow-sm break-words w-full md:w-auto text-foreground">
+          <h1 className="text-4xl md:text-[60px] font-heading font-bold uppercase leading-tight drop-shadow-sm break-words w-full md:w-auto text-foreground">
             SEJARAH <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">DESA BANDINGAN</span>
           </h1>
@@ -485,7 +485,7 @@ const App: React.FC = () => {
       <section id="kuliner" className="relative z-10 py-20 md:py-32 border-t border-foreground/10 bg-transparent">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 px-4">
-             <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold uppercase leading-tight drop-shadow-sm break-words w-full md:w-auto text-foreground">
+             <h1 className="text-4xl md:text-[60px] font-heading font-bold uppercase leading-tight drop-shadow-sm break-words w-full md:w-auto text-foreground">
               KULINER <br/> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">DESA BANDINGAN</span>
             </h1>
@@ -506,7 +506,7 @@ const App: React.FC = () => {
       <section id="info" className="relative z-10 py-20 md:py-32 px-4 md:px-6 bg-secondary/40 backdrop-blur-lg">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-20">
-             <h2 className="text-4xl md:text-6xl font-heading font-bold opacity-10 text-foreground">
+             <h2 className="text-5xl md:text-[60px] font-heading font-bold opacity-10 text-foreground">
                INFO
              </h2>
              <p className="text-primary font-sans uppercase tracking-widest relative z-10 mt-2 text-sm md:text-base">
