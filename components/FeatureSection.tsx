@@ -74,8 +74,8 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
             <div 
               className={`relative h-full w-full rounded-3xl overflow-hidden border border-foreground/10 group shadow-2xl ${gallerySlides.length > 0 ? 'cursor-pointer' : ''}`}
               onClick={() => gallerySlides.length > 0 && setIsModalOpen(true)}
-              data-hover={gallerySlides.length > 0 ? "true" : undefined}
-              data-cursor-text={gallerySlides.length > 0 ? "VIEW" : undefined}
+             
+              
             >
               <img 
                 

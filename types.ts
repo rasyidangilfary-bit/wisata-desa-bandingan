@@ -33,5 +33,5 @@ export interface KulinerItem {
   description: string;
   products: string;
   address: string;
-  whatsapp: string;
+  whatsapp?: string;
 }

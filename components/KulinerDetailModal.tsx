@@ -43,7 +43,7 @@ const KulinerDetailModal: React.FC<KulinerDetailModalProps> = ({ item, onClose }
           <button
             onClick={onClose}
             className="absolute top-4 right-4 z-20 p-2 rounded-full bg-foreground/10 text-foreground hover:bg-primary hover:text-background transition-colors"
-            data-hover="true"
+           
           >
             <X className="w-6 h-6" />
           </button>
@@ -95,17 +95,19 @@ const KulinerDetailModal: React.FC<KulinerDetailModalProps> = ({ item, onClose }
               </p>
 
               {/* WhatsApp Action */}
-              <div>
-                <a
-                  href={item.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white py-3 md:py-4 px-6 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                >
-                  <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
-                  Pesan via WhatsApp
-                </a>
-              </div>
+              {item.whatsapp && (
+                <div>
+                  <a
+                    href={item.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white py-3 md:py-4 px-6 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  >
+                    <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
+                    Pesan via WhatsApp
+                  </a>
+                </div>
+              )}
             </motion.div>
           </div>
         </motion.div>

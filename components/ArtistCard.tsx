@@ -22,7 +22,7 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ artist, onClick }) => {
       whileHover="hover"
       whileTap="hover"
       animate="rest"
-      data-hover="true"
+     
       onClick={onClick}
     >
       {/* Image Background with Zoom */}

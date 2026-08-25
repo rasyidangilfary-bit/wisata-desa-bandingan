@@ -16,8 +16,8 @@ const KulinerCard: React.FC<KulinerCardProps> = ({ item, onClick }) => {
       whileHover="hover"
       whileTap="hover"
       animate="rest"
-      data-hover="true"
-      data-cursor-text="VIEW"
+     
+      
       onClick={onClick}
     >
       {/* Image Background with Zoom */}
