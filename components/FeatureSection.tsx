@@ -44,10 +44,10 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
       <div id={id} className="max-w-7xl mx-auto px-4 md:px-6 relative py-10 md:py-16">
         <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 items-center`}>
           <div className={`lg:col-span-5 order-2 ${isReversed ? 'lg:order-2' : 'lg:order-1'}`}>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 md:mb-6 leading-tight">
-              {titleLine1} <br/> <GradientText text={titleLine2} className="text-4xl md:text-6xl text-foreground" />
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 md:mb-6 leading-tight">
+              {titleLine1} <br/> <GradientText text={titleLine2} className="text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight" />
             </h2>
-            <p className="text-base md:text-lg text-foreground/80 mb-6 md:mb-8 font-light leading-relaxed drop-shadow-sm">
+            <p className="text-base md:text-lg text-foreground/80 mb-6 md:mb-8 font-light leading-relaxed drop-shadow-sm max-w-2xl">
               {description}
             </p>
             

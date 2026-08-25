@@ -253,7 +253,7 @@ const App: React.FC = () => {
             <GradientText 
               text="DESA BANDINGAN" 
               as="h1" 
-              className="text-[12vw] md:text-[10vw] leading-[0.9] font-black tracking-tighter text-center text-foreground" 
+              className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.9] font-black tracking-tighter text-center text-foreground" 
             />
             {/* Optimized Orb - Reduced Blur for Performance */}
             <motion.div 
@@ -275,7 +275,7 @@ const App: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="text-base md:text-2xl font-light max-w-xl mx-auto text-foreground/80 leading-relaxed drop-shadow-sm px-4"
+            className="text-base md:text-lg lg:text-xl font-light max-w-2xl mx-auto text-foreground/80 leading-relaxed drop-shadow-sm px-4"
           >
             Destinasi Desa Wisata Banjarnegara
           </motion.p>
