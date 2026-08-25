@@ -220,7 +220,7 @@ const App: React.FC = () => {
       </AnimatePresence>
 
       {/* HERO SECTION */}
-      <header className="relative h-[100svh] min-h-[600px] flex flex-col items-center justify-center overflow-hidden px-4">
+      <header className="relative h-[100svh] min-h-[600px] flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
         {/* Watermark Background Image */}
         <img 
           src="https://res.cloudinary.com/dperkgbpn/image/upload/v1784078710/IMG-20260714-WA0033_mjzi9b.jpg" 
@@ -253,7 +253,7 @@ const App: React.FC = () => {
             <GradientText 
               text="DESA BANDINGAN" 
               as="h1" 
-              className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.9] font-black tracking-tighter text-center text-foreground" 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter text-center text-foreground" 
             />
             {/* Optimized Orb - Reduced Blur for Performance */}
             <motion.div 
@@ -275,7 +275,7 @@ const App: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="text-base md:text-lg lg:text-xl font-light max-w-2xl mx-auto text-foreground/80 leading-relaxed drop-shadow-sm px-4"
+            className="text-base sm:text-lg max-w-md sm:max-w-lg md:max-w-2xl mx-auto font-light text-foreground/80 leading-relaxed drop-shadow-sm px-4 sm:px-6 lg:px-8"
           >
             Destinasi Desa Wisata Banjarnegara
           </motion.p>
