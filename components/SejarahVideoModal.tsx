@@ -41,46 +41,26 @@ const SejarahVideoModal: React.FC<SejarahVideoModalProps> = ({ isOpen, onClose }
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.9, y: 20 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col md:flex-row"
+            className="relative w-full max-w-4xl lg:max-w-5xl bg-black rounded-2xl shadow-2xl overflow-hidden aspect-video flex items-center justify-center"
           >
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/50 text-white hover:bg-primary hover:text-background backdrop-blur-sm transition-colors"
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-primary hover:text-background backdrop-blur-sm transition-colors"
               data-hover="true"
             >
               <X className="w-6 h-6" />
             </button>
 
-            {/* Video Section (Left side on desktop) */}
-            <div className="w-full md:w-1/2 h-64 md:h-auto shrink-0 relative bg-black">
-              <iframe 
-                className="absolute inset-0 w-full h-full object-cover"
-                src="https://www.youtube.com/embed/XFCggIhOTsI?autoplay=1&rel=0&modestbranding=1" 
-                title="Sejarah Desa Bandingan" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowFullScreen
-              ></iframe>
-            </div>
-
-            {/* Content Section (Right side on desktop) */}
-            <div className="w-full md:w-1/2 p-6 sm:p-8 overflow-y-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-              >
-                <div className="flex items-center gap-3 text-primary mb-2 md:mb-3">
-                   <PlayCircle className="w-4 h-4" />
-                   <span className="font-sans text-sm tracking-widest uppercase">Video Dokumenter</span>
-                </div>
-                
-                <h1 className="text-4xl md:text-[60px] font-heading font-bold uppercase leading-none text-foreground">
-                  SEJARAH DESA BANDINGAN
-                </h1>
-              </motion.div>
-            </div>
+            {/* Video Section */}
+            <iframe 
+              className="absolute inset-0 w-full h-full object-cover"
+              src="https://www.youtube.com/embed/XFCggIhOTsI?autoplay=1&rel=0&modestbranding=1" 
+              title="Sejarah Desa Bandingan" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+            ></iframe>
           </motion.div>
         </motion.div>
       )}
