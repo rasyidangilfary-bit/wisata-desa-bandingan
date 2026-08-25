@@ -9,7 +9,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Ticket, Globe, Zap, Music, MapPin, Menu, X, Calendar, Play, ChevronLeft, ChevronRight, Instagram, Youtube, ArrowUpRight, MessageCircle, Home, Tractor, Leaf, Box, Footprints, Gem, Shield, Sparkles, Users } from 'lucide-react';
 import FluidBackground from './components/FluidBackground';
 import GradientText from './components/GlitchText';
-
+import CustomCursor from './components/CustomCursor';
 import ArtistCard from './components/ArtistCard';
 import KulinerCard from './components/KulinerCard';
 import KulinerDetailModal from './components/KulinerDetailModal';
@@ -177,8 +177,8 @@ const App: React.FC = () => {
   };
   
   return (
-    <div className="relative min-h-screen text-foreground selection:bg-primary selection:text-background cursor-auto overflow-x-hidden">
-      
+    <div className="relative min-h-screen text-foreground selection:bg-primary selection:text-background cursor-auto md:cursor-none overflow-x-hidden">
+      <CustomCursor />
       <FluidBackground />
       
       {/* Navigation */}
@@ -191,8 +191,8 @@ const App: React.FC = () => {
             <button 
               key={item} 
               onClick={() => scrollToSection(item.toLowerCase())}
-              className="hover:text-primary transition-colors text-foreground cursor-pointer bg-transparent border-none"
-             
+              className="hover:text-primary transition-colors text-foreground cursor-none bg-transparent border-none"
+              data-hover="true"
             >
               {item}
             </button>
@@ -200,8 +200,8 @@ const App: React.FC = () => {
         </div>
         <button 
           onClick={() => scrollToSection('info')}
-          className="hidden md:inline-block border border-foreground px-8 py-3 text-xs font-bold tracking-widest uppercase hover:bg-foreground hover:text-background transition-all duration-300 text-foreground cursor-pointer bg-transparent"
-         
+          className="hidden md:inline-block border border-foreground px-8 py-3 text-xs font-bold tracking-widest uppercase hover:bg-foreground hover:text-background transition-all duration-300 text-foreground cursor-none bg-transparent"
+          data-hover="true"
           aria-label="Cari info biaya sewa tempat manasik banjarnegara"
         >
           INFO
@@ -472,8 +472,8 @@ const App: React.FC = () => {
           </h1>
 
           <div 
-            className="w-full aspect-video mt-12 relative rounded-2xl overflow-hidden shadow-2xl bg-stone-200 border border-foreground/10 group cursor-pointer" 
-            
+            className="w-full aspect-video mt-12 relative rounded-2xl overflow-hidden shadow-2xl bg-stone-200 border border-foreground/10 group cursor-none" 
+            data-hover="true" 
             onClick={() => setIsSejarahModalOpen(true)}
           >
             <img
@@ -575,8 +575,8 @@ const App: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ y: -20 }}
-                  className={`relative p-8 md:p-10 border border-foreground/10 backdrop-blur-md flex flex-col min-h-[450px] md:min-h-[550px] transition-colors duration-300 ${info.accent}  group cursor-pointer block`}
-                 
+                  className={`relative p-8 md:p-10 border border-foreground/10 backdrop-blur-md flex flex-col min-h-[450px] md:min-h-[550px] transition-colors duration-300 ${info.accent}  group cursor-none block`}
+                  data-hover="true"
                 >
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
                   

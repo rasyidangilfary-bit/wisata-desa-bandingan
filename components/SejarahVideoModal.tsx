@@ -47,7 +47,7 @@ const SejarahVideoModal: React.FC<SejarahVideoModalProps> = ({ isOpen, onClose }
             <button
               onClick={onClose}
               className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/50 text-white hover:bg-primary hover:text-background backdrop-blur-sm transition-colors"
-             
+              data-hover="true"
             >
               <X className="w-6 h-6" />
             </button>

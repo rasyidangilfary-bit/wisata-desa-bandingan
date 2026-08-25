@@ -70,7 +70,7 @@ const WisataGalleryModal: React.FC<WisataGalleryModalProps> = ({ isOpen, onClose
             <button
               onClick={onClose}
               className="absolute top-4 right-4 z-20 p-2 rounded-full bg-foreground/10 text-foreground hover:bg-primary hover:text-background transition-colors"
-             
+              data-hover="true"
             >
               <X className="w-6 h-6" />
             </button>
@@ -81,7 +81,7 @@ const WisataGalleryModal: React.FC<WisataGalleryModalProps> = ({ isOpen, onClose
                 <button
                   onClick={(e) => { e.stopPropagation(); handlePrev(); }}
                   className="absolute left-4 bottom-4 translate-y-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2 z-20 p-3 rounded-full bg-background/50 text-foreground hover:bg-primary hover:text-background transition-colors border border-foreground/10 backdrop-blur-sm"
-                 
+                  data-hover="true"
                   aria-label="Previous Slide"
                 >
                   <ChevronLeft className="w-6 h-6" />
@@ -90,7 +90,7 @@ const WisataGalleryModal: React.FC<WisataGalleryModalProps> = ({ isOpen, onClose
                 <button
                   onClick={(e) => { e.stopPropagation(); handleNext(); }}
                   className="absolute right-4 bottom-4 translate-y-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2 z-20 p-3 rounded-full bg-background/50 text-foreground hover:bg-primary hover:text-background transition-colors border border-foreground/10 backdrop-blur-sm md:right-8"
-                 
+                  data-hover="true"
                   aria-label="Next Slide"
                 >
                   <ChevronRight className="w-6 h-6" />

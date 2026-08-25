@@ -72,10 +72,10 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
           <div className={`lg:col-span-7 relative h-[300px] md:h-[450px] w-full order-1 ${isReversed ? 'lg:order-1' : 'lg:order-2'}`}>
             <div className="absolute inset-0 bg-gradient-to-br from-secondary to-primary rounded-3xl rotate-3 opacity-30 blur-xl" />
             <div 
-              className={`relative h-full w-full rounded-3xl overflow-hidden border border-foreground/10 group shadow-2xl ${gallerySlides.length > 0 ? 'cursor-pointer' : ''}`}
+              className={`relative h-full w-full rounded-3xl overflow-hidden border border-foreground/10 group shadow-2xl ${gallerySlides.length > 0 ? 'cursor-none' : ''}`}
               onClick={() => gallerySlides.length > 0 && setIsModalOpen(true)}
-             
-              
+              data-hover={gallerySlides.length > 0 ? "true" : undefined}
+              data-cursor-text={gallerySlides.length > 0 ? "VIEW" : undefined}
             >
               <img 
                 

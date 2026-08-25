@@ -66,7 +66,7 @@ const AIChat: React.FC = () => {
                 <Sparkles className="w-5 h-5 text-fuchsia-400 animate-pulse" />
                 <h3 className="font-heading font-bold text-white tracking-wider">LUMI AI</h3>
               </div>
-              <button onClick={() => setIsOpen(false)} className="text-white/50 hover:text-white">
+              <button onClick={() => setIsOpen(false)} className="text-white/50 hover:text-white" data-hover="true">
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -123,7 +123,7 @@ const AIChat: React.FC = () => {
                   onClick={handleSend}
                   disabled={isLoading || !input.trim()}
                   className="bg-fuchsia-600 p-2 rounded-lg hover:bg-fuchsia-500 transition-colors disabled:opacity-50"
-                 
+                  data-hover="true"
                 >
                   <Send className="w-4 h-4 text-white" />
                 </button>
@@ -139,7 +139,7 @@ const AIChat: React.FC = () => {
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
         className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-tr from-fuchsia-600 to-cyan-600 flex items-center justify-center shadow-lg shadow-fuchsia-500/40 border border-white/20 z-50 group"
-       
+        data-hover="true"
       >
         {isOpen ? (
           <X className="w-5 h-5 md:w-6 md:h-6 text-white" />

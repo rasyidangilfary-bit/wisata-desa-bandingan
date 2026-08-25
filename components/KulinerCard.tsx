@@ -11,13 +11,13 @@ interface KulinerCardProps {
 const KulinerCard: React.FC<KulinerCardProps> = ({ item, onClick }) => {
   return (
     <motion.div
-      className="group relative h-[400px] md:h-[500px] w-full overflow-hidden border-b md:border-r border-foreground/10 bg-background cursor-pointer"
+      className="group relative h-[400px] md:h-[500px] w-full overflow-hidden border-b md:border-r border-foreground/10 bg-background cursor-none"
       initial="rest"
       whileHover="hover"
       whileTap="hover"
       animate="rest"
-     
-      
+      data-hover="true"
+      data-cursor-text="VIEW"
       onClick={onClick}
     >
       {/* Image Background with Zoom */}
