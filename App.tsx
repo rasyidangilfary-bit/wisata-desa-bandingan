@@ -440,10 +440,10 @@ const App: React.FC = () => {
       {/* SEJARAH SECTION */}
       <section id="sejarah" className="relative z-10 py-24 lg:py-32 bg-transparent border-t border-foreground/10">
         <div className="w-full max-w-7xl mx-auto flex flex-col items-center text-center px-6">
-          <h2 className="text-5xl md:text-8xl font-heading font-bold uppercase leading-[0.9] drop-shadow-sm break-words w-full md:w-auto text-foreground">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold uppercase leading-tight drop-shadow-sm break-words w-full md:w-auto text-foreground">
             SEJARAH <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">DESA BANDINGAN</span>
-          </h2>
+          </h1>
 
           <div 
             className="w-full aspect-video mt-12 relative rounded-2xl overflow-hidden shadow-2xl bg-stone-200 border border-foreground/10 group cursor-pointer" 
@@ -485,10 +485,10 @@ const App: React.FC = () => {
       <section id="kuliner" className="relative z-10 py-20 md:py-32 border-t border-foreground/10 bg-transparent">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 px-4">
-             <h2 className="text-5xl md:text-8xl font-heading font-bold uppercase leading-[0.9] drop-shadow-sm break-words w-full md:w-auto">
+             <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold uppercase leading-tight drop-shadow-sm break-words w-full md:w-auto text-foreground">
               KULINER <br/> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">DESA BANDINGAN</span>
-            </h2>
+            </h1>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 bg-background/50 backdrop-blur-sm">
@@ -506,10 +506,10 @@ const App: React.FC = () => {
       <section id="info" className="relative z-10 py-20 md:py-32 px-4 md:px-6 bg-secondary/40 backdrop-blur-lg">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-20">
-             <h2 className="text-5xl md:text-9xl font-heading font-bold opacity-10 text-foreground">
+             <h2 className="text-4xl md:text-6xl font-heading font-bold opacity-10 text-foreground">
                INFO
              </h2>
-             <p className="text-primary font-sans uppercase tracking-widest -mt-3 md:-mt-8 relative z-10 text-sm md:text-base">
+             <p className="text-primary font-sans uppercase tracking-widest relative z-10 mt-2 text-sm md:text-base">
                INFORMASI LENGKAP
              </p>
           </div>
@@ -556,7 +556,7 @@ const App: React.FC = () => {
                   <div className="flex-1 flex flex-col items-center justify-center text-center">
                     <info.icon className="w-16 h-16 md:w-20 md:h-20 text-primary mb-8 md:mb-12" />
                     <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4 text-foreground">{info.name}</h3>
-                    <p className="text-base text-foreground/80 leading-relaxed font-light">{info.description}</p>
+                    <p className="text-base sm:text-lg text-foreground/80 leading-relaxed font-light">{info.description}</p>
                   </div>
                   
                   <div 

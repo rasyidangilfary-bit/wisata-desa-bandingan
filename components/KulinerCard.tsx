@@ -51,8 +51,8 @@ const KulinerCard: React.FC<KulinerCardProps> = ({ item, onClick }) => {
         
         <div>
           <div className="overflow-hidden">
-            <motion.h3 
-              className="font-heading text-3xl md:text-4xl font-bold uppercase text-foreground mix-blend-multiply will-change-transform drop-shadow-sm"
+            <motion.h2 
+              className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-foreground mix-blend-multiply will-change-transform drop-shadow-sm"
               variants={{
                 rest: { y: 0 },
                 hover: { y: -5 }
@@ -60,7 +60,7 @@ const KulinerCard: React.FC<KulinerCardProps> = ({ item, onClick }) => {
               transition={{ duration: 0.4 }}
             >
               {item.title}
-            </motion.h3>
+            </motion.h2>
           </div>
         </div>
       </div>

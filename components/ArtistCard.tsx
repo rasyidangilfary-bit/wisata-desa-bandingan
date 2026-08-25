@@ -59,8 +59,8 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ artist, onClick }) => {
 
         <div>
           <div className="overflow-hidden">
-            <motion.h3 
-              className="font-heading text-3xl md:text-4xl font-bold uppercase text-foreground mix-blend-multiply will-change-transform"
+            <motion.h2 
+              className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-foreground mix-blend-multiply will-change-transform"
               variants={{
                 rest: { y: 0 },
                 hover: { y: -5 }
@@ -68,7 +68,7 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ artist, onClick }) => {
               transition={{ duration: 0.4 }}
             >
               {artist.name}
-            </motion.h3>
+            </motion.h2>
           </div>
           <motion.p 
             className="text-sm font-medium uppercase tracking-widest text-accent mt-2 will-change-transform"

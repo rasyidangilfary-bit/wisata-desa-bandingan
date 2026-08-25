@@ -128,9 +128,9 @@ const WisataGalleryModal: React.FC<WisataGalleryModalProps> = ({ isOpen, onClose
                    <span className="font-sans text-xs md:text-sm tracking-widest uppercase">{currentSlide.tag}</span>
                 </div>
                 
-                <h3 className="text-2xl md:text-5xl font-heading font-bold uppercase leading-none mb-1 md:mb-2 text-foreground">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold uppercase leading-none mb-1 md:mb-2 text-foreground">
                   {currentSlide.title}
-                </h3>
+                </h2>
                 
                 <p className="text-sm md:text-lg text-accent font-medium tracking-widest uppercase mb-4 md:mb-6">
                   {currentSlide.subtitle}
