@@ -28,10 +28,10 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ artist, onClick }) => {
       {/* Image Background with Zoom */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.img 
-          loading="lazy"
+          
           src={artist.image} 
           alt={artist.name} 
-          className="h-full w-full object-cover grayscale will-change-transform"
+          className="h-full w-full object-cover grayscale "
           variants={{
             rest: { scale: 1, opacity: 0.6, filter: 'grayscale(100%)' },
             hover: { scale: 1.05, opacity: 0.9, filter: 'grayscale(0%)' }
@@ -52,7 +52,7 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ artist, onClick }) => {
                rest: { opacity: 0, x: 20, y: -20 },
                hover: { opacity: 1, x: 0, y: 0 }
              }}
-             className="bg-primary text-background rounded-full p-2 will-change-transform"
+             className="bg-primary text-background rounded-full p-2 "
            >
              <ArrowUpRight className="w-6 h-6" />
            </motion.div>
@@ -61,7 +61,7 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ artist, onClick }) => {
         <div>
           <div className="overflow-hidden">
             <motion.h2 
-              className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-foreground mix-blend-multiply will-change-transform"
+              className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-foreground mix-blend-multiply "
               variants={{
                 rest: { y: 0 },
                 hover: { y: -5 }
@@ -72,7 +72,7 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ artist, onClick }) => {
             </motion.h2>
           </div>
           <motion.p 
-            className="text-sm font-medium uppercase tracking-widest text-accent mt-2 will-change-transform"
+            className="text-sm font-medium uppercase tracking-widest text-accent mt-2 "
             variants={{
               rest: { opacity: 0, y: 10 },
               hover: { opacity: 1, y: 0 }

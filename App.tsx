@@ -5,7 +5,7 @@
 
 
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Ticket, Globe, Zap, Music, MapPin, Menu, X, Calendar, Play, ChevronLeft, ChevronRight, Instagram, Youtube, ArrowUpRight, MessageCircle, Home, Tractor, Leaf, Box, Footprints, Gem, Shield, Sparkles, Users } from 'lucide-react';
 import FluidBackground from './components/FluidBackground';
 import GradientText from './components/GlitchText';
@@ -103,6 +103,9 @@ const LINEUP: Artist[] = [
 ];
 
 const App: React.FC = () => {
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedArtist, setSelectedArtist] = useState<Artist | null>(null);
   const [selectedKuliner, setSelectedKuliner] = useState<KulinerItem | null>(null);
@@ -227,7 +230,8 @@ const App: React.FC = () => {
         {/* Color Overlay to forcefully dye the image with the theme's color */}
         <div className="absolute inset-0 bg-background mix-blend-color opacity-80 z-[-1]"></div>
 
-        <div 
+        <motion.div 
+          style={{ y, opacity }}
           className="z-10 text-center flex flex-col items-center w-full max-w-6xl pb-24 md:pb-20"
         >
            {/* Date / Location */}
@@ -251,9 +255,12 @@ const App: React.FC = () => {
               as="h1" 
               className="text-5xl md:text-[128px] font-bold leading-tight tracking-tighter text-center text-foreground" 
             />
-            {/* Optimized Orb - Static for Performance */}
-            <div 
-               className="absolute -z-20 w-[50vw] h-[50vw] bg-primary/20 blur-[60px] rounded-full pointer-events-none"
+            {/* Optimized Orb - Reduced Blur for Performance */}
+            <motion.div 
+               className="absolute -z-20 w-[50vw] h-[50vw] bg-primary/20 blur-[60px] rounded-full pointer-events-none "
+               animate={{ scale: [0.8, 1.2, 0.8], opacity: [0.3, 0.6, 0.3] }}
+               transition={{ duration: 6, repeat: Infinity }}
+               style={{ transform: 'translateZ(0)' }}
             />
           </div>
           
@@ -272,12 +279,12 @@ const App: React.FC = () => {
           >
             Destinasi Desa Wisata Banjarnegara
           </motion.p>
-        </div>
+        </motion.div>
 
         {/* MARQUEE - SLOWED DOWN for Performance & Aesthetics */}
         <div className="absolute bottom-12 md:bottom-16 left-0 w-full py-3 md:py-4 bg-primary text-background z-20 overflow-hidden border-y-4 border-primary shadow-[0_0_40px_rgba(76,107,93,0.2)]">
           <motion.div 
-            className="flex w-fit will-change-transform"
+            className="flex w-fit "
             animate={{ x: "-50%" }}
             transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
           >
@@ -444,14 +451,14 @@ const App: React.FC = () => {
             onClick={() => setIsSejarahModalOpen(true)}
           >
             <img
-              loading="lazy"
+              
               src="https://res.cloudinary.com/dperkgbpn/image/upload/f_auto/v1787474730/Screenshot_20260823_154208_com.huawei.himovie.overseas_edit_6909132176373_kky2ds.jpg"
               alt="Sejarah Video Thumbnail"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             
             {/* Arrow Icon Hover */}
-            <div className="absolute top-6 right-6 md:top-8 md:right-8 p-2 rounded-full bg-primary text-background opacity-0 translate-x-4 -translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 will-change-transform shadow-lg z-20">
+            <div className="absolute top-6 right-6 md:top-8 md:right-8 p-2 rounded-full bg-primary text-background opacity-0 translate-x-4 -translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500  shadow-lg z-20">
               <ArrowUpRight className="w-6 h-6" />
             </div>
 
@@ -542,7 +549,7 @@ const App: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ y: -20 }}
-                  className={`relative p-8 md:p-10 border border-foreground/10 backdrop-blur-md flex flex-col min-h-[450px] md:min-h-[550px] transition-colors duration-300 ${info.accent} will-change-transform group cursor-pointer block`}
+                  className={`relative p-8 md:p-10 border border-foreground/10 backdrop-blur-md flex flex-col min-h-[450px] md:min-h-[550px] transition-colors duration-300 ${info.accent}  group cursor-pointer block`}
                   data-hover="true"
                 >
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />

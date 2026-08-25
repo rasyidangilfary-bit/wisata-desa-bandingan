@@ -23,10 +23,10 @@ const KulinerCard: React.FC<KulinerCardProps> = ({ item, onClick }) => {
       {/* Image Background with Zoom */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.img 
-          loading="lazy"
+          
           src={item.image} 
           alt={item.title} 
-          className="h-full w-full object-cover grayscale will-change-transform"
+          className="h-full w-full object-cover grayscale "
           variants={{
             rest: { scale: 1, opacity: 0.6, filter: 'grayscale(100%)' },
             hover: { scale: 1.05, opacity: 0.9, filter: 'grayscale(0%)' }
@@ -44,7 +44,7 @@ const KulinerCard: React.FC<KulinerCardProps> = ({ item, onClick }) => {
                rest: { opacity: 0, x: 20, y: -20 },
                hover: { opacity: 1, x: 0, y: 0 }
              }}
-             className="bg-primary text-background rounded-full p-2 will-change-transform shadow-lg"
+             className="bg-primary text-background rounded-full p-2  shadow-lg"
            >
              <ArrowUpRight className="w-6 h-6" />
            </motion.div>
@@ -53,7 +53,7 @@ const KulinerCard: React.FC<KulinerCardProps> = ({ item, onClick }) => {
         <div>
           <div className="overflow-hidden">
             <motion.h2 
-              className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-foreground mix-blend-multiply will-change-transform drop-shadow-sm"
+              className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-foreground mix-blend-multiply  drop-shadow-sm"
               variants={{
                 rest: { y: 0 },
                 hover: { y: -5 }

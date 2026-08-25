@@ -78,10 +78,10 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
               data-cursor-text={gallerySlides.length > 0 ? "VIEW" : undefined}
             >
               <img 
-                loading="lazy"
+                
                 src={imageSrc} 
                 alt={imageAlt} 
-                className="h-full w-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 will-change-transform" 
+                className="h-full w-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 " 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
               
@@ -95,7 +95,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
               </div>
               
               {gallerySlides.length > 0 && (
-                <div className="absolute top-6 right-6 md:top-8 md:right-8 p-2 rounded-full bg-primary text-background opacity-0 translate-x-4 -translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 will-change-transform shadow-lg z-20">
+                <div className="absolute top-6 right-6 md:top-8 md:right-8 p-2 rounded-full bg-primary text-background opacity-0 translate-x-4 -translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500  shadow-lg z-20">
                   <ArrowUpRight className="w-6 h-6" />
                 </div>
               )}

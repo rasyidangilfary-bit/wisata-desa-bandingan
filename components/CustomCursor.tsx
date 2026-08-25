@@ -44,7 +44,7 @@ const CustomCursor: React.FC = () => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 z-[9999] pointer-events-none flex items-center justify-center hidden md:flex will-change-transform"
+      className="fixed top-0 left-0 z-[9999] pointer-events-none flex items-center justify-center hidden md:flex "
       style={{ x, y, translateX: '-50%', translateY: '-50%' }}
     >
       <motion.div

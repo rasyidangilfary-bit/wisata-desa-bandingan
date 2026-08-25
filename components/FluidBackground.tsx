@@ -26,7 +26,7 @@ const StarField = () => {
       {stars.map((star) => (
         <motion.div
           key={star.id}
-          className="absolute rounded-full bg-primary will-change-[opacity,transform]"
+          className="absolute rounded-full bg-primary "
           style={{
             left: `${star.x}%`,
             top: `${star.y}%`,
@@ -58,18 +58,48 @@ const FluidBackground: React.FC = () => {
       <StarField />
 
       {/* Blob 1: Sage Green */}
-      <div
+      <motion.div
         className="absolute top-[-10%] left-[-10%] w-[90vw] h-[90vw] bg-primary rounded-full mix-blend-multiply filter blur-[80px] opacity-20"
+        animate={{
+          x: [0, 50, -25, 0],
+          y: [0, -25, 25, 0],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+        style={{ transform: 'translateZ(0)' }}
       />
 
       {/* Blob 2: Warm Beige */}
-      <div
+      <motion.div
         className="absolute top-[20%] right-[-20%] w-[100vw] h-[80vw] bg-secondary rounded-full mix-blend-multiply filter blur-[80px] opacity-30"
+        animate={{
+          x: [0, -50, 25, 0],
+          y: [0, 50, -25, 0],
+        }}
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        style={{ transform: 'translateZ(0)' }}
       />
 
       {/* Blob 3: Earthy Brown */}
-      <div
+      <motion.div
         className="absolute bottom-[-20%] left-[20%] w-[80vw] h-[80vw] bg-accent rounded-full mix-blend-multiply filter blur-[80px] opacity-15"
+        animate={{
+          x: [0, 75, -75, 0],
+          y: [0, -50, 50, 0],
+        }}
+        transition={{
+          duration: 35,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        style={{ transform: 'translateZ(0)' }}
       />
 
       {/* Static Grain Overlay */}
