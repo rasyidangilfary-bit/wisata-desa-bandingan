@@ -57,19 +57,19 @@ const WisataGalleryModal: React.FC<WisataGalleryModalProps> = ({ isOpen, onClose
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 cursor-auto"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 cursor-none"
         >
           <motion.div
             initial={{ scale: 0.9, y: 20 }}
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.9, y: 20 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col md:flex-row"
+            className="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col md:flex-row cursor-none"
           >
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 z-20 p-2 rounded-full bg-foreground/10 text-foreground hover:bg-primary hover:text-background transition-colors"
+              className="absolute top-4 right-4 z-20 p-2 rounded-full bg-foreground/10 text-foreground hover:bg-primary hover:text-background transition-colors cursor-none"
               data-hover="true"
             >
               <X className="w-6 h-6" />
@@ -80,7 +80,7 @@ const WisataGalleryModal: React.FC<WisataGalleryModalProps> = ({ isOpen, onClose
               <>
                 <button
                   onClick={(e) => { e.stopPropagation(); handlePrev(); }}
-                  className="absolute left-4 bottom-4 translate-y-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2 z-20 p-3 rounded-full bg-background/50 text-foreground hover:bg-primary hover:text-background transition-colors border border-foreground/10 backdrop-blur-sm"
+                  className="absolute left-4 bottom-4 translate-y-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2 z-20 p-3 rounded-full bg-background/50 text-foreground hover:bg-primary hover:text-background transition-colors border border-foreground/10 backdrop-blur-sm cursor-none"
                   data-hover="true"
                   aria-label="Previous Slide"
                 >
@@ -89,7 +89,7 @@ const WisataGalleryModal: React.FC<WisataGalleryModalProps> = ({ isOpen, onClose
 
                 <button
                   onClick={(e) => { e.stopPropagation(); handleNext(); }}
-                  className="absolute right-4 bottom-4 translate-y-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2 z-20 p-3 rounded-full bg-background/50 text-foreground hover:bg-primary hover:text-background transition-colors border border-foreground/10 backdrop-blur-sm md:right-8"
+                  className="absolute right-4 bottom-4 translate-y-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2 z-20 p-3 rounded-full bg-background/50 text-foreground hover:bg-primary hover:text-background transition-colors border border-foreground/10 backdrop-blur-sm md:right-8 cursor-none"
                   data-hover="true"
                   aria-label="Next Slide"
                 >

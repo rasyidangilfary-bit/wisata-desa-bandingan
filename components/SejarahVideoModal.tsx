@@ -34,19 +34,19 @@ const SejarahVideoModal: React.FC<SejarahVideoModalProps> = ({ isOpen, onClose }
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 cursor-auto"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 cursor-none"
         >
           <motion.div
             initial={{ scale: 0.9, y: 20 }}
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.9, y: 20 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-4xl lg:max-w-5xl bg-black rounded-2xl shadow-2xl overflow-hidden aspect-video flex items-center justify-center"
+            className="relative w-full max-w-4xl lg:max-w-5xl bg-black rounded-2xl shadow-2xl overflow-hidden aspect-video flex items-center justify-center cursor-none"
           >
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-primary hover:text-background backdrop-blur-sm transition-colors"
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-primary hover:text-background backdrop-blur-sm transition-colors cursor-none"
               data-hover="true"
             >
               <X className="w-6 h-6" />
