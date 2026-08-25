@@ -78,6 +78,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
               data-cursor-text={gallerySlides.length > 0 ? "VIEW" : undefined}
             >
               <img 
+                loading="lazy"
                 src={imageSrc} 
                 alt={imageAlt} 
                 className="h-full w-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 will-change-transform" 

@@ -28,6 +28,7 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ artist, onClick }) => {
       {/* Image Background with Zoom */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.img 
+          loading="lazy"
           src={artist.image} 
           alt={artist.name} 
           className="h-full w-full object-cover grayscale will-change-transform"

@@ -23,6 +23,7 @@ const KulinerCard: React.FC<KulinerCardProps> = ({ item, onClick }) => {
       {/* Image Background with Zoom */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.img 
+          loading="lazy"
           src={item.image} 
           alt={item.title} 
           className="h-full w-full object-cover grayscale will-change-transform"
