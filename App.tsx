@@ -556,7 +556,7 @@ const App: React.FC = () => {
                 icon: Instagram, 
                 description: 'Ikuti keseharian warga, update terbaru, dan pesona keindahan desa kami.', 
                 btnText: 'Follow IG', 
-                href: 'https://www.instagram.com/agroeduwisatareligibandingan/', 
+                href: 'https://www.instagram.com/bandingan_bawang?igsi=MTczcHJncHM3Y3A3cQ==', 
                 accent: 'bg-primary/5 border-primary/30' 
               },
               { 
@@ -564,7 +564,7 @@ const App: React.FC = () => {
                 icon: MessageCircle, 
                 description: 'Hubungi kami untuk reservasi dan informasi lebih lanjut.', 
                 btnText: 'Chat WhatsApp', 
-                href: 'https://wa.me/628975909153', 
+                href: 'https://wa.me/628112891715', 
                 accent: 'bg-accent/5 border-accent/30' 
               },
             ].map((info, i) => {
@@ -614,8 +614,8 @@ const App: React.FC = () => {
             <div className="flex flex-col md:items-end">
               <h4 className="text-xs font-bold uppercase tracking-widest mb-2 text-foreground">UNNES GIAT 16</h4>
               <div className="flex flex-col gap-2 md:items-end text-left md:text-right">
-                <a href="https://instagram.com/giat16.desabandingan" target="_blank" rel="noopener noreferrer" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">
-                  @giat16.desabandingan
+                <a href="https://www.instagram.com/bandingan_bawang?igsi=MTczcHJncHM3Y3A3cQ==" target="_blank" rel="noopener noreferrer" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">
+                  @bandingan_bawang
                 </a>
                 <a href="mailto:kkndesabandingan2026@gmail.com" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">
                   kkndesabandingan2026@gmail.com
